@@ -47,21 +47,21 @@ const Navbar = () => {
                     href="https://google.com"
                     className=" hover:bg-pink-300 text-gray-800 px-3 py-2 rounded-md text-sm font-medium"
                   >
-                    Dashboard
+                    Home
                   </a>
 
                   <a
-                    href="https"
+                    href="https://google.com"
                     className="text-gray-800 hover:bg-amber-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
-                    About
+                    Whereto?
                   </a>
 
                   <a
-                    href="httos"
+                    href="https://google.com"
                     className="text-gray-800 hover:bg-purple-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
-                    Admin
+                    About
                   </a>
                 </div>
               </motion.div>
@@ -129,21 +129,21 @@ const Navbar = () => {
                   href="#"
                   className="hover:bg-gray-700 text-orange-400 sblock px-3 py-2 rounded-md text-base font-medium"
                 >
-                  Dashboard
+                  Home
                 </a>
 
                 <a
                   href="#"
                   className="text-orange-400 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
-                  Team
+                  whereto?
                 </a>
 
                 <a
                   href="#"
                   className="text-orange-400 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
-                  Projects
+                  About
                 </a>
               </div>
             </div>
