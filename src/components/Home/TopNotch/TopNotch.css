@@ -22,11 +22,14 @@ video {
   z-index: 1;
   background: linear-gradient(
     90deg,
-    rgba(19, 162, 181, 0.35) 0%,
+    rgba(12, 8, 84, 0.35) 0%,
     rgba(228, 36, 36, 0.611) 50%,
     rgba(146, 74, 6, 0.563) 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   mix-blend-mode: multiply;
+}
+video {
+  filter: saturate(80%);
 }

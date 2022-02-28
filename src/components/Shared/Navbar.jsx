@@ -16,7 +16,6 @@ const Navbar = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.3, duration: 1.7 }}
-                whileTap={{ scale: 0.6 }}
               >
                 <img className="h-12 w-12 mr-1" src={logo} alt="logo" />
               </motion.div>
