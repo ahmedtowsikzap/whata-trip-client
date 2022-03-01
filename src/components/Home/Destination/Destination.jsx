@@ -18,7 +18,7 @@ const Destination = () => {
     controls.start("hidden");
   }
   const scrollReveal = {
-    hidden: { opacity: 0, scale: 1, transition: { duration: 0.5 } },
+    hidden: { opacity: 0, scale: 1.1, transition: { duration: 0.5 } },
     show: {
       opacity: 1,
       scale: 1,
@@ -34,13 +34,13 @@ const Destination = () => {
       initial="hidden"
       ref={element}
     >
-      <h1 className="text-center text-5xl text-rose-400 py-8">
+      <h1 className="text-center text-5xl text-rose-400 mt-20">
         Inexclusive <br />
         <span className="underline decoration-orange-600 text-gray-600">
           Resorts
         </span>
       </h1>
-      <p className="text-center">still thinking? </p>
+      <p className="text-center mt-5">Still thinking? </p>
 
       <div class="md:px-12 lg:px-24">
         <div class="overflow-x-hidden -mx-4 md:mx-0">

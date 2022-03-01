@@ -15,17 +15,15 @@ const Navbar = () => {
                 className="flex-shrink-0"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 1.3, duration: 1.7 }}
+                transition={{ delay: 2.4 }}
               >
                 <img className="h-12 w-12 mr-1" src={logo} alt="logo" />
               </motion.div>
               <motion.div
                 className="hidden md:block flex-shrink-0 ml-3"
                 initial={{ x: "-100vw" }}
-                animate={{ x: 0 }}
-                transition={{ delay: 0.5 }}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.6 }}
+                animate={{ x: 20 }}
+                transition={{ delay: 1.3 }}
               >
                 <h2 className="italic text-xl font-medium ">
                   <span className="underline decoration-fuchsia-500">What</span>
@@ -39,7 +37,7 @@ const Navbar = () => {
                 className="hidden md:block"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 1.7, duration: 1.8 }}
+                transition={{ delay: 3 }}
               >
                 <div className="ml-10 flex items-baseline space-x-4">
                   <a

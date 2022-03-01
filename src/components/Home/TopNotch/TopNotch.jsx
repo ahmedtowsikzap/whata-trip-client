@@ -9,14 +9,14 @@ const TopNotch = () => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 3 }}
+        transition={{ delay: 0.3 }}
       >
         <video src={vid} autoPlay loop muted></video>
         <div className="text">
           <motion.h2
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 4, duration: 1.3 }}
+            transition={{ delay: 3.2, duration: 1.5 }}
           >
             Destination Awaits!
           </motion.h2>
