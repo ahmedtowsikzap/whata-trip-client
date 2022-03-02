@@ -4,6 +4,7 @@ import girloncar from "../../../Assets/images/girl.jpg";
 import { motion } from "framer-motion";
 import { useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { Link } from "react-router-dom";
 
 const Intro = () => {
   const controls = useAnimation();
@@ -88,14 +89,17 @@ const Intro = () => {
               </p>
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                 <div className="rounded-md shadow">
+                <Link to={'/spots'} >
                   <motion.a
                     whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.5 }}
+                    whileTap={{ scale: 0.8 }}
                     href="/"
                     className="w-full flex items-center justify-center px-8 py-3  border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-red-500 to-fuchsia-600 hover:from-pink-700 hover:to-yellow-600  md:py-4 md:text-lg md:px-10"
                   >
                     Start Booking!
+                 
                   </motion.a>
+                  </Link>
                 </div>
                 <div className="mt-3 sm:mt-0 sm:ml-3"></div>
               </div>

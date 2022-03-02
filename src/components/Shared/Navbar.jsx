@@ -41,21 +41,10 @@ const Navbar = () => {
                 transition={{ delay: 3 }}
               >
                 <div className="ml-10 flex items-baseline space-x-4">
-                <Link to="/services">Services</Link>
+                <Link to="/home">Home</Link>
+                <Link to="/spots">whereto?</Link>
+                <Link to="/login">Login</Link>
 
-                  <a
-                    href="https://google.com"
-                    className="text-gray-800 hover:bg-amber-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Whereto?
-                  </a>
-
-                  <a
-                    href="https://google.com"
-                    className="text-gray-800 hover:bg-purple-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    About
-                  </a>
                 </div>
               </motion.div>
             </div>
@@ -118,12 +107,7 @@ const Navbar = () => {
           {(ref) => (
             <div className="md:hidden" id="mobile-menu">
               <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a
-                  href="#"
-                  className="hover:bg-gray-700 text-orange-400 sblock px-3 py-2 rounded-md text-base font-medium"
-                >
-                  Home
-                </a>
+              <Link to="/spots">whereto?</Link>
 
                 <a
                   href="#"
