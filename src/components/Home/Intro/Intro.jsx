@@ -74,16 +74,15 @@ const Intro = () => {
               <motion.h1
                 whileHover={{
                   y: -25,
-                  scale: 1,
                 }}
-                className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl"
+                className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-2xl ml-10 md:text-5xl"
               >
                 <span className="block xl:inline">Check our</span>{" "}
                 <span className="block text-orange-400 xl:inline">
                   Special Packages
                 </span>
               </motion.h1>
-              <p className="mt-3 text-base text-grey- sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+              <p className=" text-base mx-20 text-grey- sm:mt-5 sm:text-sm  sm:max-w-xl md:mt-5 md:text-xl  lg:mx-0">
                 For Exclusive offers & deals we are always dedicated for you to
                 get the best experiance!
               </p>

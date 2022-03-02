@@ -18,12 +18,12 @@ const Destination = () => {
     controls.start("hidden");
   }
   const scrollReveal = {
-    hidden: { opacity: 0, scale: 1.1, transition: { duration: 0.5 } },
+    hidden: { opacity: 0, scale: 1.1, transition: { duration: 0.3 } },
     show: {
       opacity: 1,
       scale: 1,
       transition: {
-        duration: 1.5,
+        duration: 0.8,
       },
     },
   };
@@ -43,32 +43,33 @@ const Destination = () => {
       <p className="text-center mt-5">Still thinking? </p>
 
       <div class="md:px-12 lg:px-24">
-        <div class="overflow-x-hidden -mx-4 md:mx-0">
-          <div class="container m-auto py-8 overflow-x-auto">
-            <div class="h-[60vh] w-[130vh] md:h-full md:w-full grid grid-cols-12 grid-rows-4 pl-8 pr-4 md:pl-0 md:pr-0 divide-x gap-4">
+        <div className="overflow-x-hidden -mx-4 md:mx-0">
+          <div className="container m-auto py-8 overflow-x-auto">
+            <div className="h-[60vh] w-[130vh] md:h-full md:w-full grid grid-cols-12 grid-rows-4 pl-8 pr-4 md:pl-0 md:pr-0 divide-x gap-4">
               <motion.div
                 whileHover={{
-                  x: -14,
-                  transition: { duration: 0.5 },
+                  x: 9,
+                  scale: 0.9,
+                  transition: { duration: 0.3 },
                 }}
-                class="col-span-4 row-span-4 md:col-span-8 lg:col-span-6 md:h-[25rem] lg:h-[31rem] px-2 py-6"
+                className="col-span-4 row-span-4 md:col-span-8 lg:col-span-6 md:h-[25rem] lg:h-[31rem] px-2 py-6"
               >
                 <img
                   src={bali}
                   alt="/"
-                  class="h-full w-full rounded-2xl object-cover"
+                  className="h-full w-full rounded-2xl object-cover"
                 />
               </motion.div>
               <motion.div
                 whileHover={{
                   x: 26,
                 }}
-                class="col-span-4 row-span-2 lg:col-span-3 lg:h-60 p-2 pt-6  rounded-bl-2xl"
+                className="col-span-4 row-span-2 lg:col-span-3 lg:h-60 p-2 pt-6  rounded-bl-2xl"
               >
                 <img
                   src={bali2}
                   alt="/"
-                  class="h-full w-full rounded-3xl object-cover"
+                  className="h-full w-full rounded-3xl object-cover"
                 />
               </motion.div>
               <motion.div
@@ -76,12 +77,12 @@ const Destination = () => {
                   x: 12,
                   scale: 0.9,
                 }}
-                class="col-span-4 row-span-2 lg:col-span-3 lg:h-60 p-2 pt-6 md:pt-2 lg:pt-6  rounded-bl-2xl md:rounded-tl-2xl"
+                className="col-span-4 row-span-2 lg:col-span-3 lg:h-60 p-2 pt-6 md:pt-2 lg:pt-6  rounded-bl-2xl md:rounded-tl-2xl"
               >
                 <img
                   src={greece}
                   alt="/"
-                  class="h-full w-full rounded-xl object-cover"
+                  className="h-full w-full rounded-xl object-cover"
                 />
               </motion.div>
               <motion.div
@@ -89,21 +90,27 @@ const Destination = () => {
                   x: 10,
                   scale: 1.1,
                 }}
-                class="col-span-5 row-span-2 md:col-span-7 lg:col-span-4 lg:h-60 p-2 pb-6  rounded-tl-2xl"
+                className="col-span-5 row-span-2 md:col-span-7 lg:col-span-4 lg:h-60 p-2 pb-6  rounded-tl-2xl"
               >
                 <img
                   src={france}
                   alt="/"
-                  class="h-full w-full rounded-2xl object-cover"
+                  className="h-full w-full rounded-2xl object-cover"
                 />
               </motion.div>
-              <div class="col-span-3 row-span-2 md:col-span-5 lg:col-span-2 lg:h-60 p-2 pb-6 rounded-tl-2xl">
+              <motion.div 
+               whileHover={{
+                x: 9,
+                scale: 1,
+                transition: { duration: 0.1 },
+              }}
+              className="col-span-3 row-span-2 md:col-span-5 lg:col-span-2 lg:h-60 p-2 pb-6 rounded-tl-2xl">
                 <img
                   src={maldive}
                   alt="/"
-                  class="h-full w-full rounded-2xl object-cover"
+                  className="h-full w-full rounded-2xl object-cover"
                 />
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>

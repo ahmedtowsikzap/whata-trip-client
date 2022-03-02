@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
 import { motion } from "framer-motion";
 import logo from "../../Assets/images/baggage.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,12 +41,7 @@ const Navbar = () => {
                 transition={{ delay: 3 }}
               >
                 <div className="ml-10 flex items-baseline space-x-4">
-                  <a
-                    href="https://google.com"
-                    className=" hover:bg-pink-300 text-gray-800 px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Home
-                  </a>
+                <Link to="/services">Services</Link>
 
                   <a
                     href="https://google.com"
