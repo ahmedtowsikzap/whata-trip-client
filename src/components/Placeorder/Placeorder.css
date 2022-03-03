@@ -1,0 +1,26 @@
+.add-service form{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(21, 15, 16); */
+    
+    }
+    .add-service form input, textarea{
+        width: 40%;
+        margin: 16px;
+        background-color: rgba(97, 39, 13, 0.098);
+        border-radius: 6px;
+        border: 0px solid;
+    }
+
+.add-service .button{
+
+    background-color: rgb(21, 4, 4);
+    color: rgb(165, 13, 13);
+    border-radius: 4px;
+    border: 0;
+    padding: 10px;
+    box-shadow: rgb(45, 11, 11) 0px 19px 38px, rgb(10, 6, 18) 0px 15px 12px;
+}

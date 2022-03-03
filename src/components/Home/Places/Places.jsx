@@ -5,7 +5,7 @@ const Places = () => {
 const [placesto, setPlacesto] = useState([]);
 useEffect(()=>{
 
-fetch('./data.JSON')
+fetch('http://localhost:5000/services')
 .then(res=> res.json())
 .then(data => setPlacesto(data))
 
@@ -22,7 +22,7 @@ fetch('./data.JSON')
            {
 
         placesto.map(service => placesto.indexOf(service) <3 && <Place
-        key={service.id}
+        key={service._id}
         service={service}
         > </Place>)
       }

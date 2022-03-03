@@ -5,7 +5,7 @@ const Allservice = () => {
     const [allservice, setAllService] = useState([]);
 useEffect(()=>{
 
-      fetch('./data.JSON')
+      fetch('http://localhost:5000/services')
     .then(res=> res.json())
      .then(data => setAllService(data))
 
@@ -23,7 +23,7 @@ useEffect(()=>{
 
                  allservice.map(spots => <Allservices
                  
-                 key={spots.id}
+                 key={spots._id}
                  spots={spots}
 
                  >
