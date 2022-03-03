@@ -3,12 +3,14 @@ import { Transition } from "@headlessui/react";
 import { motion } from "framer-motion";
 import logo from "../../Assets/images/baggage.png";
 import { Link } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
 
 const Navbar = () => {
+  const { user, logOut } = useAuth();
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
-      <nav className="bg-white-300 shadow-lg shadow-red-100">
+      <nav className="bg-white-300 shadow-lg shadow-red-100 pt-5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
@@ -41,9 +43,50 @@ const Navbar = () => {
                 transition={{ delay: 3 }}
               >
                 <div className="ml-10 flex items-baseline space-x-4">
-                <Link to="/home">Home</Link>
-                <Link to="/spots">whereto?</Link>
-                <Link to="/login">Login</Link>
+                <Link to="/home">
+
+                <a
+                  className="text-pink-400 hover:bg-red-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                >
+                  Home
+                </a>
+
+                </Link>
+                <Link to="/spots">
+                <a
+                  className="text-yellow-600 hover:bg-red-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                >
+                  Whereto?
+                </a>
+
+                </Link>
+                <Link to="/login">
+                <a
+                  className="text-blue-400 hover:bg-purple-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                >
+                  Login
+                </a>
+
+                </Link>
+                <Link to={'/Manageallbookings'} >
+                <a
+                  className="text-orange-400 hover:bg-red-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                >
+                  All Bookings
+                </a>
+                </Link>
+                {
+
+               user.email ? <button className='btn b btn-outline-danger btn-rounded my-3 px-5' onClick={logOut}> Log out</button>
+               :
+               <p className='text-orange-700 underline decoration-amber-400' as={Link} to="/login">Sign in</p>
+
+}
+                <p className="w-15">
+                {user.email && <a href="#login">{user.displayName} <img className='w-8 h-8 rounded-full' src={user.photoURL} alt="dfdf" /></a>}
+
+                </p>
+
 
                 </div>
               </motion.div>
@@ -107,21 +150,33 @@ const Navbar = () => {
           {(ref) => (
             <div className="md:hidden" id="mobile-menu">
               <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <Link to="/spots">whereto?</Link>
+              <Link to="/home">
 
-                <a
-                  href="#"
+              <a
                   className="text-orange-400 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
-                  whereto?
+                  Home
                 </a>
 
-                <a
-                  href="#"
+              </Link>
+              <Link to="/spots">
+
+              <a
                   className="text-orange-400 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
-                  About
+                  Spots
                 </a>
+
+              </Link>
+
+                <Link to={'/Manageallbookings'} >
+                <a
+                  className="text-orange-400 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                >
+                  All Bookings
+                </a>
+                </Link>
+
               </div>
             </div>
           )}
