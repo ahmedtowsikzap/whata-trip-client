@@ -1,8 +1,28 @@
 import React from "react";
 import useAuth from "../../hooks/useAuth";
 import Navbar from "../Shared/Navbar";
+import { motion } from "framer-motion";
+import { useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const LoginPage = () => {
+  const controls = useAnimation();
+  const [element, view] = useInView({ threshold: 0.3 });
+  if (view) {
+    controls.start("show");
+  } else {
+    controls.start("hidden");
+  }
+  const scrollReveal = {
+    hidden: { opacity: 0, scale: 1.1, transition: { duration: 0.3 } },
+    show: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 1.5,
+      },
+    },
+  };
   const { signInWithGoogle } = useAuth();
   const handleGoogleSignIn = () => {
     signInWithGoogle();
@@ -11,7 +31,12 @@ const LoginPage = () => {
   return (
     <>
     <Navbar/>
-      <div className="h-screen flex bg-gray-bg6">
+      <motion.div 
+      variants={scrollReveal}
+      animate={controls}
+      initial="hidden"
+      ref={element}
+      className="h-screen flex bg-gray-bg6">
         <div className="w-full max-w-md m-auto b rounded-lg border border-primaryBorder shadow-default py-10 bg-red-100 px-16">
           <h1 className="text-2xl font-medium text-primary mt-4 mb-12 text-center">
             Log in/Sign in to your account 🔐
@@ -27,7 +52,7 @@ const LoginPage = () => {
               </button>
             </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

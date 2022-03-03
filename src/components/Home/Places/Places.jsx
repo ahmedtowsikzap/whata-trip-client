@@ -14,11 +14,11 @@ fetch('./data.JSON')
   return (
     <div>
       <div>
-        <h1 className="text-center text-4xl text-neutral-800 mt-5">
-         TO the Tour
+        <h1 className="text-center text-5xl text-cyan-300 my-20">
+         Adventure Awaits
         </h1>
         </div>
-        <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 justify-items-center'>
+        <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 justify-items-center my-20'>
            {
 
         placesto.map(service => placesto.indexOf(service) <3 && <Place

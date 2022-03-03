@@ -15,7 +15,6 @@ const Home = () => {
       <Destination />
       <Intro />
       <Places/>
-      <Footer />
     </div>
   );
 };

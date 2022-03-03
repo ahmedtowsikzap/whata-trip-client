@@ -18,7 +18,7 @@ useEffect(()=>{
            Choose your Destination
           </h1>
           </div>
-          <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 justify-items-center'>
+          <div className='bg-gray-bg-5 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 justify-items-center'>
              {
 
                  allservice.map(spots => <Allservices
